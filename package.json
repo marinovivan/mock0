@@ -16,15 +16,12 @@
     "http",
     "https",
     "intercept",
-    "interception",
-    "intercepting",
     "mock",
     "mocking",
-    "network",
     "test",
     "testing",
-    "webmock",
-    "easy"
+    "capture",
+    "capturing"
 	],
   "dependencies": {
     "axios": "^0.19.2",
