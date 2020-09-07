@@ -1,6 +1,6 @@
 {
   "name": "mock0",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mock0 is a zero effort http(s) mocking library with build-in capture to file solution",
   "main": "src/index.js",
   "scripts": {
