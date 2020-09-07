@@ -70,6 +70,9 @@ function extractHeadersFromRequest(request) {
 }
 
 async function waitRequestData(request) {
+  if (request.method === 'GET') {
+    return ''
+  }
   return new Promise((resolve, reject) => {
     request.on('data', data => resolve(data))
     request.on('error', err => reject(err))
@@ -171,7 +174,7 @@ function capture(file, _interestingHeaders) {
   capturing = true
   mocking = false
   captureFile = file
-  interestingHeaders = _interestingHeaders
+  interestingHeaders = _interestingHeaders || []
   installInterceptor()
 }
 
