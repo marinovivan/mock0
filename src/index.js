@@ -70,11 +70,9 @@ function extractHeadersFromRequest(request) {
 }
 
 async function waitRequestData(request) {
-  if (request.method === 'GET') {
-    return ''
-  }
   return new Promise((resolve, reject) => {
     request.on('data', data => resolve(data))
+    request.on('end', () => resolve(''))
     request.on('error', err => reject(err))
   })
 }
